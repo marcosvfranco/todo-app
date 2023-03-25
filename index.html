@@ -11,11 +11,11 @@
 		<section class="todoapp">
 			<header class="header">
 				<h1>todos</h1>
-				<input class="new-todo" placeholder="What needs to be done?" autofocus>
+				<input data-test-id="new-todo-field" class="new-todo" placeholder="What needs to be done?" autofocus>
 			</header>
 			<section class="main">
 				<input id="toggle-all" class="toggle-all" type="checkbox">
-				<label for="toggle-all">Mark all as complete</label>
+				<label data-test-id="toggle-all-checkbox" for="toggle-all">Mark all as complete</label>
 				<ul class="todo-list"></ul>
 			</section>
 			<footer class="footer"></footer>
@@ -29,9 +29,9 @@
 			{{#this}}
 			<li {{#if completed}}class="completed"{{/if}} data-id="{{id}}">
 				<div class="view">
-					<input class="toggle" type="checkbox" {{#if completed}}checked{{/if}}>
+					<input data-test-id="toggle-checkbox" class="toggle" type="checkbox" {{#if completed}}checked{{/if}}>
 					<label>{{title}}</label>
-					<button class="destroy"></button>
+					<button data-test-id="destroy-button" class="destroy"></button>
 				</div>
 				<input class="edit" value="{{title}}">
 			</li>
